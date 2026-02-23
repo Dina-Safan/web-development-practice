@@ -29,5 +29,15 @@ console.log(student); */
 
 //&--------------------------------------------------------
 
+//^ 3. Object Length Write a JavaScript program to get the length of a JavaScript object.
 
+/* var student = {
+name : "David Rayy",
+sclass : "VI",
+rollno : 12 ,
+age:23};
+
+console.log(Object.entries(student).length); */
+
+//&-----------------------------------------------------------
 
