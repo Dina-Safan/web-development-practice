@@ -36,3 +36,20 @@ console.log(array_Clone([1, 2, [4, 0]]));
 
 console.log(test([1,2,3,6]));
  */
+
+//&-------------------------------------------------------
+
+//^ 4. Last Elements of Array Write a JavaScript function to get the last element of an array. Passing the parameter 'n' will return the last 'n' elements of the array.
+
+/* function last (arr, n=1){
+
+    let result =[];
+    for(var i=arr.length-1  ; i>=0; i--){
+        if(n>0){
+            result.push(arr[i]);
+            n--;  
+        }
+    }
+    return result.reverse();
+}
+console.log(last([1,2,3],3)); */
