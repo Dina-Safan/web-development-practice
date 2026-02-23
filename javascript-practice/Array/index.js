@@ -12,3 +12,13 @@ console.log(is_Array([1,3]));
 
 //&--------------------------------------------------------
 
+//^ 2. Clone Array Write a JavaScript function to clone an array.
+
+/* function array_Clone(input){
+    return input.slice();
+}
+
+console.log(array_Clone([1, 2, [4, 0]]));
+ */
+
+//&--------------------------------------------------------
