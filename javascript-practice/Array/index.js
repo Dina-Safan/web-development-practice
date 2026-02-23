@@ -37,7 +37,7 @@ console.log(array_Clone([1, 2, [4, 0]]));
 console.log(test([1,2,3,6]));
  */
 
-//~ another soliution 
+//? another soliution 
 /* function first(arr , n=1){
     if(n<0) return [];
     return arr.slice(0,n);
@@ -63,11 +63,20 @@ console.log(first([1,2,3,4],-2)); */
 }
 console.log(last([1,2,3],3)); */
 
-//~ another soliution 
+//? another soliution 
 /* function first(arr , n=1){
     return arr.slice(-n);
 }
 
 console.log(first([1,2,3,4],3)); */
 
+//&-------------------------------------------------------------
+
+
+//^ 5. Join Array Elements Write a simple JavaScript program to join all elements of the following array into a string.
+
+/* myColor = ["Red", "Green", "White", "Black"];
+ console.log(myColor.join());
+ console.log(myColor.join("+")); */
  
+//&--------------------------------------------------------------
