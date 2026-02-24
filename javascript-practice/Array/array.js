@@ -72,7 +72,6 @@ console.log(first([1,2,3,4],3)); */
 
 //&-------------------------------------------------------------
 
-
 //^ 5. Join Array Elements Write a simple JavaScript program to join all elements of the following array into a string.
 
 /* myColor = ["Red", "Green", "White", "Black"];
@@ -82,6 +81,7 @@ console.log(first([1,2,3,4],3)); */
 //&--------------------------------------------------------------
 
 //^ 6. Insert Dashes Between Evens Write a JavaScript program that accepts a number as input and inserts dashes (-) between each even number. For example if you accept 025468 the output should be 0-254-6-8.
+
 /* function dashesBetweenEvens(num){
     if (num === null || num === "" ||isNaN(num)) return "Enter a num"
     var result=[num[0]];
