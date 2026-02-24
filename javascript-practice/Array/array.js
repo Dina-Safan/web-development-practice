@@ -80,3 +80,32 @@ console.log(first([1,2,3,4],3)); */
  console.log(myColor.join("+")); */
  
 //&--------------------------------------------------------------
+
+//^ 6. Insert Dashes Between Evens Write a JavaScript program that accepts a number as input and inserts dashes (-) between each even number. For example if you accept 025468 the output should be 0-254-6-8.
+/* function dashesBetweenEvens(num){
+    if (num === null || num === "" ||isNaN(num)) return "Enter a num"
+    var result=[num[0]];
+    for(var i=1;i<num.length;i++){
+    if(num[i-1]%2===0 && num[i]%2===0){
+        result.push("-",num[i]);
+    }
+    else{
+        result.push(num[i]);
+    }
+
+    }
+    return result.join("")
+
+}
+
+var num=window.prompt("Enter a Num")
+console.log(dashesBetweenEvens(num)); */
+
+//&--------------------------------------------------------------
+
+
+
+
+
+
+
