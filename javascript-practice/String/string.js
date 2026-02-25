@@ -18,3 +18,14 @@ console.log(is_string([1, 2, 4, 0])); */
 console.log(is_Blank("")); */
 
 //&-----------------------------------------------
+
+//^3. String to Array of Words Write a JavaScript function to split a string and convert it into an array of words.
+
+/* function string_to_array(input){
+    return input.trim().split(" ") 
+}
+
+console.log(string_to_array("Robin Singh"));
+ */
+
+//&----------------------------------------------------
