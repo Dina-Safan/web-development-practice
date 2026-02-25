@@ -104,6 +104,34 @@ console.log(dashesBetweenEvens(num)); */
 //&--------------------------------------------------------------
 
 
+//^ 7. Sort Array Write a JavaScript program to sort the items of an array.
+
+/*  var arr1 = [ -3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+ arr1.sort((a,b)=>a-b);
+ console.log(arr1); */
+
+//?anothesr solution 
+
+/* var arr1 = [ -3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+
+ for(var i=0;i<arr1.length;i++){
+   for(var j=i+1;j<arr1.length;j++){
+    if(arr1[i]>arr1[j]){
+          var temp=arr1[i];
+        arr1[i]=arr1[j];
+        arr1[j]=temp
+
+    } 
+   }  
+ }
+ console.log(arr1); */
+
+ //&--------------------------------------------------
+ 
+
+
+ 
+ 
 
 
 
