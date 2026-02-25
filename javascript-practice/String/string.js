@@ -29,3 +29,15 @@ console.log(string_to_array("Robin Singh"));
  */
 
 //&----------------------------------------------------
+
+//^4. Extract Characters Write a JavaScript function to extract a specified number of characters from a string.
+
+/* function truncate_string(input,n){
+    if(typeof input ==="string" && typeof n ==="number" && n>0 ) return input.slice(0,n);
+
+    return "";
+}
+
+console.log(truncate_string("Robin Singh",3)); */
+
+//&------------------------------------------------
