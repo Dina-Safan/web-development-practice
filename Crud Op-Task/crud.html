@@ -64,17 +64,20 @@
     </div>
 </main>
 
-<section class="model position-fixed w-100 h-100 top-0 end-0  d-none">
+<section class="model position-fixed w-100 h-100 top-0 end-0 overflow-auto d-block">
     <h2 id="hAdd" class="d-flex  justify-content-center align-items-center mt-3 mb-4">Add New Product</h2>
     <h2 id="hUpdate" class="d-flex  justify-content-center align-items-center mt-3 mb-4 d-none">Edit Product</h2>
     <div class="container d-flex  justify-content-center align-items-center w-100  ">
-        <div class="form w-50  py-5 px-3 rounded" style="background-color: white;">
+        <div class="form w-50 mb-5  py-4 px-3 rounded" style="background-color: white;">
         <div class="mb-3">
             <input type="text" class="form-control" id="productNameInput" placeholder="Product Name">
+             <p class="danger">Contains letters and spaces only, minimum length 3</p>
         </div>
+       
 
         <div class="mb-3">
             <input list="categories" type="text" class="form-control" id="productCategoryInput" placeholder="Product Category">
+             <p class="danger">Contains letters and spaces only, minimum length 3</p>
         </div>
 
         <datalist id="categories">
@@ -88,14 +91,17 @@
 
         <div class="mb-3">
             <input  type="number" class="form-control" id="productPriceInput" placeholder="Product Price..$">
+            <p class="danger">Number between 50 and 1000 $</p>
         </div>
 
         <div class="mb-3">
             <input  type="number" class="form-control" id="productSizeInput" placeholder="Product Size..ml">
+            <p class="danger">Numeric, 50ml or more (e.g., 50ml, 100ml)</p>
         </div>
 
         <div class="mb-3">
             <input list="scents"  type="text" class="form-control" id="productScentInput" placeholder="Product Scent">
+            <p class="danger">Contains letters and spaces only, minimum length 3</p>
         </div>
 
         <datalist id="scents">

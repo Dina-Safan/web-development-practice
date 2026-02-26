@@ -1,4 +1,4 @@
-<//^ Html Element
+//^ Html Element
 
 const showAddedModalBtn=document.getElementById("showAddedModalBtn");
 const seacrhInput=document.getElementById("seacrhInput");
