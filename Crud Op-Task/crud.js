@@ -82,7 +82,7 @@ function displayProduct(i){
                             
                             <div class="btns ps-3 pb-3">
                                 <button class="btn btn-warning" onclick="getProductEdit(${i})"> Edit</button>
-                             <button class="btn btn-danger">Delete</button> 
+                             <button class="btn btn-danger" onclick="deleteProduct(${i})">Delete</button> 
                             </div>
                         </div>
                     </div>
@@ -95,6 +95,14 @@ function displayAllProducts(){
     for(let i=0;i<productList.length;i++){
         displayProduct(i);
     }
+}
+
+function deleteProduct(i){
+    productList.splice(i,1);
+    localStorage.setItem("products",JSON.stringify(productList));
+    productContainer.innerHTML="";
+    displayAllProducts();
+
 }
 
 function getProductEdit(i){
