@@ -29,7 +29,12 @@ displayAllProducts();
 //& Function
 
 function addProduct(){
-    const product={
+    if(validate(productNameInput,nameRegx) 
+        && validate(productCategoryInput,categoryRegx)
+        && validate(productSizeInput,sizeRegx)
+        && validate(productScentInput,scentRegx)
+        && validate(productPriceInput,priceRegx)){
+      const product={
         name:productNameInput.value,
         category:productCategoryInput.value,
         size:productSizeInput.value,
@@ -42,8 +47,19 @@ function addProduct(){
     localStorage.setItem("products",JSON.stringify(productList));
     displayProduct(productList.length -1);
     clear();
+    productNameInput.classList.remove("is-valid")
+    productCategoryInput.classList.remove("is-valid")
+    productPriceInput.classList.remove("is-valid")
+    productScentInput.classList.remove("is-valid")
+    productSizeInput.classList.remove("is-valid")
 
-    hideModal();
+
+
+ }
+ else{
+    window.alert("Enter Correct Data")
+ }
+
 }
 
 function displayProduct(i){
@@ -55,10 +71,10 @@ function displayProduct(i){
                             <div class="info p-3">
                                 <h2 class="h3">${productList[i].name}</h2>
                                <div class="row g-2">
-                                    <div class="col-md-8 col-sm-12"><span class="fw-medium">Category :</span> ${productList[i].category}</div>
-                                    <div class="col-md-4 col-sm-12"><span class="fw-medium">Size :</span> ${productList[i].size}ml</div>
-                                    <div class="col-md-8 col-sm-12"><span class="fw-medium">Scent :</span> ${productList[i].scent}</div>
-                                    <div class="col-md-4 col-sm-12"><span class="fw-medium">Price :</span> ${productList[i].price}$</div>
+                                    <div class="col-xl-8 col-md-12 col-sm-12"><span class="fw-medium">Category :</span> ${productList[i].category}</div>
+                                    <div class="col-xl-4 col-md-12 col-sm-12"><span class="fw-medium">Size :</span> ${productList[i].size}ml</div>
+                                    <div class="col-xl-8 col-md-12 col-sm-12"><span class="fw-medium">Scent :</span> ${productList[i].scent}</div>
+                                    <div class="col-xl-4 col-md-12 col-sm-12"><span class="fw-medium">Price :</span> ${productList[i].price}$</div>
                                     </div>
                             </div>  
                             
@@ -78,6 +94,23 @@ function displayAllProducts(){
         displayProduct(i);
     }
 }
+
+function validate(element,regx){
+
+   if( regx.test(element.value)){
+    element.nextElementSibling.classList.replace("d-block","d-none");
+    element.classList.add("is-valid");
+    element.classList.remove("is-invalid");
+    return true;
+   }
+
+    element.nextElementSibling.classList.replace("d-none","d-block");
+    element.classList.add("is-invalid");
+    element.classList.remove("is-valid");
+    return false;
+}
+
+
 function showModal(){
     model.classList.replace("d-none","d-block");
 }
