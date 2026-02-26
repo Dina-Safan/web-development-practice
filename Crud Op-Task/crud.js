@@ -10,20 +10,93 @@ const productPriceInput=document.getElementById("productPriceInput");
 const productCategoryInput=document.getElementById("productCategoryInput");
 const productSizeInput=document.getElementById("productSizeInput");
 const productScentInput=document.getElementById("productScentInput");
+const productImageInput=document.getElementById("productImageInput");
 const updateBtn=document.getElementById("updateBtn");
 const AddBtn=document.getElementById("AddBtn");
+const productContainer=document.querySelector(".products-container");
 
 
 //?varaibles
 
-var nameRegx=/^[A-Za-z\s]{3,}$/;
-var priceRegx = /^([5-9][0-9]|[0-9][0-9][0-9]|1000)$/;
-var categoryRegx = /^[A-Za-z\s]{3,}$/;
-var sizeRegx = /^(50|[5-9][0-9]|[1-9][0-9][0-9]+)$/;
-var scentRegx=/^[A-Za-z\s]{3,}$/;
+const nameRegx=/^[A-Za-z\s]{3,}$/;
+const priceRegx = /^([5-9][0-9]|[0-9][0-9][0-9]|1000)$/;
+const categoryRegx = /^[A-Za-z\s]{3,}$/;
+const sizeRegx = /^(50|[5-9][0-9]|[1-9][0-9][0-9]+)$/;
+const scentRegx=/^[A-Za-z\s]{3,}$/;
 
-
+let productList=JSON.parse(localStorage.getItem("products"))||[];
+displayAllProducts();
 //& Function
 
+function addProduct(){
+    const product={
+        name:productNameInput.value,
+        category:productCategoryInput.value,
+        size:productSizeInput.value,
+        scent:productScentInput.value,
+        price:productPriceInput.value,
+        url:productImageInput.files[0].name
+    }
 
+    productList.push(product);
+    localStorage.setItem("products",JSON.stringify(productList));
+    displayProduct(productList.length -1);
+    clear();
+
+    hideModal();
+}
+
+function displayProduct(i){
+   let productHtml=`
+               <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+                    <div class="inner p-3 ">
+                        <div class="product overflow-hidden rounded bg-light text-dark ">
+                            <img src="./images/${productList[i].url}" class="w-100 " alt="">
+                            <div class="info p-3">
+                                <h2 class="h3">${productList[i].name}</h2>
+                               <div class="row g-2">
+                                    <div class="col-md-8 col-sm-12"><span class="fw-medium">Category :</span> ${productList[i].category}</div>
+                                    <div class="col-md-4 col-sm-12"><span class="fw-medium">Size :</span> ${productList[i].size}ml</div>
+                                    <div class="col-md-8 col-sm-12"><span class="fw-medium">Scent :</span> ${productList[i].scent}</div>
+                                    <div class="col-md-4 col-sm-12"><span class="fw-medium">Price :</span> ${productList[i].price}$</div>
+                                    </div>
+                            </div>  
+                            
+                            <div class="btns ps-3 pb-3">
+                                <button class="btn btn-warning"> Edit</button>
+                             <button class="btn btn-danger">Delete</button> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    `
+    productContainer.innerHTML+=productHtml;
+}
+
+function displayAllProducts(){
+    for(let i=0;i<productList.length;i++){
+        displayProduct(i);
+    }
+}
+function showModal(){
+    model.classList.replace("d-none","d-block");
+}
+
+function hideModal(){
+    model.classList.replace("d-block","d-none");
+}
+
+function clear(){
+    productNameInput.value="";
+    productCategoryInput.value="";
+    productSizeInput.value="";
+    productScentInput.value="";
+    productPriceInput.value="";
+}
 //~Events>
+showAddedModalBtn.addEventListener("click",function(){
+    showModal();
+    addHeading.classList.replace("d-none","d-block");
+})
+
+AddBtn.addEventListener("click",addProduct);
