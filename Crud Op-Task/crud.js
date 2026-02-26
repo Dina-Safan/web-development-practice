@@ -79,7 +79,7 @@ function displayProduct(i){
                             </div>  
                             
                             <div class="btns ps-3 pb-3">
-                                <button class="btn btn-warning"> Edit</button>
+                                <button class="btn btn-warning" onclick="getProductEdit(${i})"> Edit</button>
                              <button class="btn btn-danger">Delete</button> 
                             </div>
                         </div>
@@ -93,6 +93,16 @@ function displayAllProducts(){
     for(let i=0;i<productList.length;i++){
         displayProduct(i);
     }
+}
+
+function getProductEdit(i){
+    showModal();
+    updateHeading.classList.replace("d-none","d-block");
+    addHeading.classList.replace("d-block","d-none");
+
+    updateBtn.classList.replace("d-none","d-block");
+    AddBtn.classList.replace("d-block","d-none");
+
 }
 
 function validate(element,regx){
@@ -109,7 +119,6 @@ function validate(element,regx){
     element.classList.remove("is-valid");
     return false;
 }
-
 
 function showModal(){
     model.classList.replace("d-none","d-block");
