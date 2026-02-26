@@ -193,6 +193,16 @@ showAddedModalBtn.addEventListener("click",function(){
     addHeading.classList.replace("d-none","d-block");
 })
 
+window.addEventListener("keydown",function(e){
+    if(e.key=="Escape") hideModal();
+});
+
+model.addEventListener("click",function(e){
+    console.log(e.target);
+    
+      if(e.target===model || e.target===document.querySelector(".model .container")) hideModal();
+    
+})
 AddBtn.addEventListener("click",addProduct);
 updateBtn.addEventListener("click",updateProduct);
 seacrhInput.addEventListener("input",searchProducts);
