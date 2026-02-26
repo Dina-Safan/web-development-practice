@@ -23,7 +23,7 @@
         <form class="d-flex " role="search"  >
       <input id="seacrhInput" class="form-control  me-2" type="search" placeholder="Search" aria-label="Search"/>
     </form>
-    <button id="addBtn" class="btn btn-success add-btn " type="button" >Add Product</button>
+    <button id="showAddedModalBtn" class="btn btn-success add-btn " type="button" >Add Product</button>
     </div>
     
   </div>
@@ -44,7 +44,7 @@
                                 <h2 class="h3">name</h2>
                                <div class="row g-2">
                                     <div class="col-md-6 col-sm-12"><span class="fw-medium">Category :</span> category</div>
-                                    <div class="col-md-6 col-sm-12"><span class="fw-medium">Size :</span> size</div>
+                                    <div class="col-md-6 col-sm-12"><span class="fw-medium">Size :</span> sizeml</div>
                                     <div class="col-md-6 col-sm-12"><span class="fw-medium">Scent :</span> scent</div>
                                     <div class="col-md-6 col-sm-12"><span class="fw-medium">Price :</span> 20$</div>
                                     </div>
@@ -107,8 +107,8 @@
             <option value="Sweet Cranberry">Sweet Cranberry</option>
         </datalist>
 
-        <button class="btn btn-warning w-100 d-none" type="button"> Update</button>
-        <button class="btn btn-success w-100 add-btn" type="button">Add Product</button>
+        <button class="btn btn-warning w-100 d-none" type="button" id="updateBtn"> Update</button>
+        <button class="btn btn-success w-100 add-btn" type="button" id="AddBtn">Add Product</button>
         </div>
     </div>
 </section>
