@@ -22,7 +22,7 @@ const nameRegx=/^[A-Za-z\s]{3,}$/;
 const priceRegx = /^([5-9][0-9]|[0-9][0-9][0-9]|1000)$/;
 const categoryRegx = /^[A-Za-z\s]{3,}$/;
 const sizeRegx = /^(50|[5-9][0-9]|[1-9][0-9][0-9]+)$/;
-const scentRegx=/^[A-Za-z\s]{3,}$/;
+const scentRegx=/^[A-Za-z-\s]{3,}$/;
 
 let updateIndex;
 
@@ -148,6 +148,14 @@ function updateProduct(){
 
 }
 
+function searchProducts(){
+    productContainer.innerHTML="";
+    for(let i=0;i<productList.length ;i++){
+        if(productList[i].name.toUpperCase().includes(seacrhInput.value.trim().toUpperCase())){
+            displayProduct(i);
+        }
+    }
+}
 function validate(element,regx){
 
    if( regx.test(element.value)){
@@ -179,6 +187,7 @@ function clear(){
     productPriceInput.value="";
 }
 //~Events>
+
 showAddedModalBtn.addEventListener("click",function(){
     showModal();
     addHeading.classList.replace("d-none","d-block");
@@ -186,3 +195,4 @@ showAddedModalBtn.addEventListener("click",function(){
 
 AddBtn.addEventListener("click",addProduct);
 updateBtn.addEventListener("click",updateProduct);
+seacrhInput.addEventListener("input",searchProducts);
