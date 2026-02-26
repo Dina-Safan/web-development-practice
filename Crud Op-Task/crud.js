@@ -24,6 +24,8 @@ const categoryRegx = /^[A-Za-z\s]{3,}$/;
 const sizeRegx = /^(50|[5-9][0-9]|[1-9][0-9][0-9]+)$/;
 const scentRegx=/^[A-Za-z\s]{3,}$/;
 
+let updateIndex;
+
 let productList=JSON.parse(localStorage.getItem("products"))||[];
 displayAllProducts();
 //& Function
@@ -96,12 +98,45 @@ function displayAllProducts(){
 }
 
 function getProductEdit(i){
+    updateIndex=i;
     showModal();
     updateHeading.classList.replace("d-none","d-block");
     addHeading.classList.replace("d-block","d-none");
 
     updateBtn.classList.replace("d-none","d-block");
     AddBtn.classList.replace("d-block","d-none");
+
+            productNameInput.value= productList[i].name;
+            productCategoryInput.value=productList[i].category;
+            productPriceInput.value=productList[i].price;
+            productScentInput.value=productList[i].scent;
+            productSizeInput.value=productList[i].size;
+        }
+
+function updateProduct(){
+
+    if(validate(productNameInput,nameRegx) 
+        && validate(productCategoryInput,categoryRegx)
+        && validate(productSizeInput,sizeRegx)
+        && validate(productScentInput,scentRegx)
+        && validate(productPriceInput,priceRegx)){
+            productList[updateIndex].name=productNameInput.value;
+            productList[updateIndex].category=productCategoryInput.value;
+            productList[updateIndex].size=productSizeInput.value;
+            productList[updateIndex].price=productPriceInput.value;
+            productList[updateIndex].scent=productScentInput.value;
+            if(productImageInput.files.length >0){
+                productList[updateIndex].url=productImageInput.files[0].name;
+
+            }
+
+            localStorage.setItem("products",JSON.stringify(productList));
+            productContainer.innerHTML="";
+            displayAllProducts();
+            hideModal();
+
+
+        }
 
 }
 
@@ -142,3 +177,4 @@ showAddedModalBtn.addEventListener("click",function(){
 })
 
 AddBtn.addEventListener("click",addProduct);
+updateBtn.addEventListener("click",updateProduct);
