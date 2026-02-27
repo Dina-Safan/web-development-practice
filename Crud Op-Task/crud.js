@@ -66,17 +66,17 @@ function addProduct(){
 
 function displayProduct(i){
    let productHtml=`
-               <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+               <div class="col-6 col-sm-6 col-md-4 col-lg-3">
                     <div class="inner p-3 ">
                         <div class="product overflow-hidden rounded bg-light text-dark ">
                             <img src="./images/${productList[i].url}" class="w-100 " alt="">
                             <div class="info p-3">
                                 <h2 class="h3">${productList[i].name}</h2>
                                <div class="row g-2">
-                                    <div class="col-xl-8 col-md-12 col-sm-12"><span class="fw-medium">Category :</span> ${productList[i].category}</div>
-                                    <div class="col-xl-4 col-md-12 col-sm-12"><span class="fw-medium">Size :</span> ${productList[i].size}ml</div>
-                                    <div class="col-xl-8 col-md-12 col-sm-12"><span class="fw-medium">Scent :</span> ${productList[i].scent}</div>
-                                    <div class="col-xl-4 col-md-12 col-sm-12"><span class="fw-medium">Price :</span> ${productList[i].price}$</div>
+                                    <div class="  col-xl-12 col-md-12 col-sm-12"><span class="fw-medium">Category :</span> ${productList[i].category}</div>
+                                    <div class=" col-xl-12 col-md-12 col-sm-12"><span class="fw-medium">Scent :</span> ${productList[i].scent}</div>
+                                     <div class=" col-xl-6 col-md-12 col-sm-12"><span class="fw-medium">Size :</span> ${productList[i].size}ml</div>
+                                    <div class="col-xl-6  col-md-12 col-sm-12"><span class="fw-medium">Price :</span> ${productList[i].price}$</div>
                                     </div>
                             </div>  
                             
@@ -185,6 +185,7 @@ function clear(){
     productSizeInput.value="";
     productScentInput.value="";
     productPriceInput.value="";
+    productImageInput.value=null;
 }
 //~Events>
 
