@@ -128,6 +128,31 @@ console.log(dashesBetweenEvens(num)); */
 
  //&--------------------------------------------------
  
+ //^8. Most Frequent Array Item Write a JavaScript program to find the most frequent item in an array.
+
+/*  var arr=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+ var count=0;
+ var max=0;
+ var index=0;
+
+ for(var i=0;i<arr.length;i++){
+    count=0;
+    for(var j=i;j<arr.length;j++){
+        if(arr[i]==arr[j]) count++;
+    }
+    if(max<count){
+         max=count;
+         index=i
+
+    }
+        
+ }
+
+ console.log(arr[index],max); */
+ 
+ //&-----------------------------------------------------------
+
+ 
 
 
  
