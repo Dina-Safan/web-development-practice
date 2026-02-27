@@ -152,6 +152,39 @@ console.log(dashesBetweenEvens(num)); */
  
  //&-----------------------------------------------------------
 
+ //^9. Swap Case in String For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
+ //~ A-->Z  65 → 90             //a-->z    97 → 122
+
+//  str="The Quick Brown Fox";
+
+/*  newStr="";
+ for(var i=0;i<str.length;i++){
+    if(str[i].charCodeAt(0)>=65 && str[i].charCodeAt(0)<=90)
+        newStr+=String.fromCharCode (str[i].charCodeAt(0)+32);
+    else if((str[i].charCodeAt(0)>=97 && str[i].charCodeAt(0)<=122))
+        newStr+=String.fromCharCode (str[i].charCodeAt(0)-32) ;
+    else
+        newStr+=str[i];
+ }
+ 
+ console.log(newStr);*/
+
+ //? Another solution 
+
+ /*
+ newStr=str.split("");
+  for(var i=0;i<newStr.length;i++){
+    if(newStr[i].toUpperCase()==newStr[i])
+        newStr[i]=newStr[i].toLowerCase();
+    else{
+        newStr[i]=newStr[i].toUpperCase()
+    }
+ }
+ console.log(newStr.join("")); */
+ 
+ 
+ //&------------------------------------------------------
+ 
  
 
 
