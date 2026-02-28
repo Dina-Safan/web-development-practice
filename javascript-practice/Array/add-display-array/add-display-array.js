@@ -16,6 +16,7 @@ function addElement(element){
 }
 
 function displayArray(){
+     arrayContainer.innerHTML="";
     if(arr.length>0){
         arrayContainer.classList.replace("d-none","d-block");
         for(let i=0;i<arr.length;i++){
