@@ -198,6 +198,23 @@ console.log(dashesBetweenEvens(num)); */
  }
  */
 
+//&--------------------------------------------------------------
+
+//^11. Sum of Squares in Array Write a JavaScript program to find the sum of squares of a numerical vector.
+
+/* let arr=[1,2,3];
+let sum=0;
+
+for(let i=0;i<arr.length;i++){
+    sum+=arr[i]*arr[i];
+
+}
+
+console.log(sum); */
+
+//&-------------------------------------------------------
+
+
  
  
 
