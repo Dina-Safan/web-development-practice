@@ -206,13 +206,28 @@ console.log(dashesBetweenEvens(num)); */
 let sum=0;
 
 for(let i=0;i<arr.length;i++){
-    sum+=arr[i]*arr[i];
+    // sum+=arr[i]*arr[i];
+    sum+=Math.pow(arr[i],2)
 
 }
 
 console.log(sum); */
 
 //&-------------------------------------------------------
+
+//^ 12. Sum and Product of Array Write a JavaScript program to compute the sum and product of an array of integers.
+
+/* let arr=[1,2,3];
+let sum=0;
+let product=1;
+
+for(let i=0;i<arr.length;i++){
+    sum+=arr[i];
+    product*=arr[i];
+}
+
+console.log(`Sum: ${sum}\nProduct: ${product}`); */
+
 
 
  
