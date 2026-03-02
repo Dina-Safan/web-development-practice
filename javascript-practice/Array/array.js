@@ -110,7 +110,7 @@ console.log(dashesBetweenEvens(num)); */
  arr1.sort((a,b)=>a-b);
  console.log(arr1); */
 
-//?anothesr solution 
+//?anothesr solution bubble sort
 
 /* var arr1 = [ -3, 8, 7, 6, 5, -4, 3, 2, 1 ];
 
@@ -125,6 +125,29 @@ console.log(dashesBetweenEvens(num)); */
    }  
  }
  console.log(arr1); */
+
+//?another solution  insertion sort
+
+/* let arr=[5,4,10,1,6,2];
+let temp;
+
+for(let i=1;i<arr.length;i++){
+    temp=arr[i];
+    for(var j=i-1;j>=0;j--){
+        if(arr[j]>temp) arr[j+1]=arr[j];
+        else break;
+    }
+
+    arr[j+1]=temp;
+
+}
+
+console.log(arr); */
+
+//? another solution selection sort
+
+
+
 
  //&--------------------------------------------------
  
