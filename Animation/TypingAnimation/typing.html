@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing animation</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: monospace;
+            font-size: 18px;
+        }
+
+        span{
+            color:#F15F79 ;
+            display: inline-block;
+            overflow: hidden;
+            margin-bottom: -9px;
+        }
+
+        span:nth-of-type(1){
+            animation: Developer 4s infinite steps(9);
+            
+        }
+        span:nth-of-type(2){
+            animation: Designer 4s infinite steps(8);
+
+        }
+        span:nth-of-type(3){
+            width: 5px;
+            height: 50px;
+            background-color: #F15F79;
+            margin-bottom: -16px;
+        }
+
+        @keyframes Developer{
+            0%,50%,100%{
+                width: 0;
+            }
+             25%{
+                width: calc( 9*19.78777px);
+            }
+            35%{
+                 width: calc( 9*19.78777px);
+
+            }
+        }
+        @keyframes Designer{
+            75%{
+                width: calc( 8*19.78777px);
+            }
+            85%{
+                width: calc( 8*19.78777px);
+
+            }
+            0%,50%,100%{
+                width: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Dina Safan <span>Developer</span><span>Designer</span><span></span></h1>
+    
+</body>
+</html>
