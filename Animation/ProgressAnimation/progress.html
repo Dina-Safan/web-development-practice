@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Animation</title>
+    <style>
+        body{
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .load{
+            width: 500px;
+            height: 4%;
+            overflow: hidden;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        .progress{
+            height: 100%;
+            background-image: linear-gradient(to right,#00416A,#E4E5E6);
+            animation: progress 1s infinite linear;
+        }
+
+        @keyframes progress{
+            0%{
+                width: 0%;
+            }
+80%{
+    width: 75%;
+}
+            100%{
+                width: 75%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="load">
+        <div class="progress">
+
+        </div>
+    </div>
+    
+</body>
+</html>
